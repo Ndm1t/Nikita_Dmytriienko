@@ -11,3 +11,4 @@ function first_non_repeated_letter(exp){
       }
     }
   }
+  document.write(first_non_repeated_letter("elephant"))
