@@ -8,7 +8,7 @@ export class Test {
         this.password = password;
     }
 
-    static employeeName = "SWAUAAH  AATXG";
+    static employeeName = "Aaliyah  Haq";
     static newPassword = "Test_123456"
     static driver = new Builder().forBrowser('chrome').build();
 
@@ -30,7 +30,7 @@ export class Test {
 
     async addPerson() {
         if (!Test.driver) return;
-        await Test.driver.findElement(By.xpath('//a[@class="oxd-main-menu-item"]')).click();
+        await Test.driver.findElement(By.xpath('//a[@class="oxd-main-menu-item" and .//span[text()="Admin"]]')).click();
         await Test.driver.findElement(By.xpath('//button[contains(., "Add")]')).click();
         let displayLayout = await Test.driver.findElement(By.css('.orangehrm-full-width-grid')).getCssValue('display');
         if (displayLayout == "grid") {
