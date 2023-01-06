@@ -1,5 +1,6 @@
 {
     "name": "jasmine",
+    "type": "module",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -17,6 +18,7 @@
     },
     "dependencies": {
         "chromedriver": "^108.0.0",
+        "crypto": "^1.0.1",
         "selenium-webdriver": "^4.7.1"
     }
 }
