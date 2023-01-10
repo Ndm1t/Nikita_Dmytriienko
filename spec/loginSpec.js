@@ -35,30 +35,16 @@ describe("Creating/deleting pay grade and currency", function () {
     })
 
 
-    // describe("Checking that paygrade has been created", ()=>{
-    //     it("Looks for the responsive card in a currency list", async ()=>{
-    //         expect(await user.checkCurencyExistance()).toBe('success')
-    //     } )
-    // })
+    describe("Checking that paygrade has been created", ()=>{
+        it("Looks for the responsive card in a currency list", async ()=>{
+            expect(await user.checkCurencyExistance()).toBe('success')
+        } )
+    })
 
-    // describe("Deleting that paygrade has been created", ()=>{
-    //     it("Deletes the responsive card in a currency list", async ()=>{
-    //         expect(await user.deleteCurency()).toBe('success')
-    //     } )
-    // })
-
-    // describe("Create user scenario", function () {
-    //     it("Presses add button, fills in the data and tries to add the person", async function () {
-
-    //         expect(await user.addPerson()).toBe('success');
-    //     });
-    // });
-
-    // describe("Remove user scenario", function () {
-    //     it("Presses add button, fills in the data and tries to add the person", async function () {
-
-    //         expect(await user.removePerson()).toBe('success');
-    //     });
-    // });
+    describe("Deleting that paygrade has been created", ()=>{
+        it("Deletes the responsive card in a currency list", async ()=>{
+            expect(await user.deleteCurency()).toBe('success')
+        } )
+    })
 
 })

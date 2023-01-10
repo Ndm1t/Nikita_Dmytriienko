@@ -25,8 +25,9 @@ export default class Test {
 
     
 
-    static async login() {
+     static async login() {
         await Test.driver.get("https://opensource-demo.orangehrmlive.com/");
+        await Test.driver.manage().setTimeouts({ implicit: 5000 })
 
         let accessData = await Test.driver.findElements(By.css('.oxd-sheet .oxd-text--p'));
         let username = (await accessData[0].getText()).split(' ').pop() || "";
@@ -79,18 +80,16 @@ export default class Test {
     }
 
     async checkCurencyExistance() {
-        let result = await Test.driver.wait(until.elementLocated(By.xpath(`/html/body/div/div[1]/div[2]/div[2]/div[2]/div/div[3]/div/div[2]/div/div`))) ? 'success' : null
-
-        return result
+        return await Test.driver.wait(until.elementLocated(By.xpath(`/html/body/div/div[1]/div[2]/div[2]/div[2]/div/div[3]/div/div[2]/div/div`))) ? 'success' : null
     }
 
 
-    // async deleteCurency() {
-    //     await Test.driver.wait(until.elementLocated(By.xpath(`//*[@id="app"]/div[1]/div[2]/div[2]/div[2]/div/div[3]/div/div[2]/div/div/div[5]/div/button[1]`))).click()
+    async deleteCurency() {
+        await Test.driver.wait(until.elementLocated(By.xpath(`//*[@id="app"]/div[1]/div[2]/div[2]/div[2]/div/div[3]/div/div[2]/div/div/div[5]/div/button[1]`))).click()
 
-    //     return "success"
+        return "success"
 
-    // }
+    }
 
     // async addPerson() {
     //     if (!Test.driver) return;
