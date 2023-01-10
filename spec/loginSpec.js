@@ -47,4 +47,17 @@ describe("Creating/deleting pay grade and currency", function () {
         } )
     })
 
+    describe("Clicking the cancel button", ()=>{
+        it("Clicks the button", async ()=>{
+            expect(await user.clickCancelButton()).toBe('success')
+        } )
+    })
+
+
+    describe("Check and delete paygrade", ()=>{
+        it("Check and delete paygrade", async ()=>{
+            expect(await user.checkAndDeletePayGradeExistance()).toBe('success')
+        } )
+    })
+
 })
